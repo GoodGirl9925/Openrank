@@ -1,6 +1,6 @@
 # ----------可信属性----------
 # Overall: [Availability, Reliability, Security, Timeliness, Maintainability, Survivability]
-overall_weight: [0.3, 0.05, 0.05, 0.25, 0.25, 0.1]
+overall_weight: [0.32, 0.01, 0.01, 0.27, 0.27, 0.12]
 
 # ----------可信子属性----------
 # Availability: [Functionality Conformance, Accuracy of Functionality,

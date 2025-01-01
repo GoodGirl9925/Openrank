@@ -17,8 +17,8 @@ def adjust_opendigger_data(item_name):
         os.makedirs(output_dir)
 
     # 定义日期范围
-    dates = [f"{year}-{month:02d}" for year in range(2022, 2024) for month in range(1, 13) if (
-            year == 2022 or (year == 2023 and month <= 3))]
+    dates = [f"{year}-{month:02d}" for year in range(2021, 2024) for month in range(1, 13) if (
+            year == 2021 or year == 2022 or (year == 2023 and month <= 3))]
 
     # 用于记录成功处理、数据不全、文件未找到、JSON解码错误的数量
     success_count = 0
