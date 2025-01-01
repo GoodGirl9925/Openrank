@@ -23,4 +23,6 @@ python overallTrustworthy_time_projects.py
 echo Run overallTrustworthy_time_projects.py successfully.
 python trustworthy_time_overallAndAttr.py
 echo Run trustworthy_time_overallAndAttr.py successfully.
+python get_project_average_trustworthy.py
+echo Run get_project_average_trustworthy.py successfully.
 echo Finished tasks. Exited.

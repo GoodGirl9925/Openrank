@@ -14,6 +14,8 @@ python calc_trustworthy.py
 echo "Run calc_trustworthy.py successfully."
 python filter_trustworthy.py
 echo "Run filter_trustworthy.py successfully."
+python get_project_average_trustworthy.py
+echo "Run get_project_average_trustworthy.py successfully."
 cd ../visualization
 echo "Changed directory to visualization."
 python averageOverallTrustworthy_projects.py
@@ -22,4 +24,8 @@ python overallTrustworthy_time_projects.py
 echo "Run overallTrustworthy_time_projects.py successfully."
 python trustworthy_time_overallAndAttr.py
 echo "Run trustworthy_time_overallAndAttr.py successfully."
+cd ../predict
+python predict_trustworthy_seq.py
+echo "Run predict_trustworthy_seq.py successfully."
 echo "Finished tasks. Exited."
+cd ../agent
