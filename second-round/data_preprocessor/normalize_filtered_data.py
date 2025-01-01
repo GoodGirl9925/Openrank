@@ -3,6 +3,7 @@
 import os
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+import numpy as np
 
 # filtered_code_change_lines_sum.csv所有元素取绝对值
 def preprocess_filtered_code_change_lines_sum():
@@ -18,7 +19,6 @@ def preprocess_filtered_code_change_lines_sum():
 
     print("文件filtered_code_change_lines_sum.csv已更新并保存。")
 
-preprocess_filtered_code_change_lines_sum()
 
 def normalize_filtered_data():
     # 设置文件目录路径
@@ -45,12 +45,23 @@ def normalize_filtered_data():
         # 读取csv文件
         df = pd.read_csv(input_file)
 
-        # 保留第一列信息，并对后续列进行归一化
+        # 保留第一列信息，并对后续列进行处理
         first_column = df.iloc[:, 0]  # 第一列
-        df = df.iloc[1:, 1:]
+        df = df.iloc[1:, 1:]  # 取数据的其余部分
+
+        # 对每个数值取对数
+        # df = np.log(df + 1e-6)  # 加上1e-6以避免取对数时出现错误
+
+        # df = np.exp(df)
+
+        prev_df = df
+
+        df = scaler.fit_transform(df)
+
+        df = np.log(df)
 
         # 对每一列应用归一化操作
-        normalized_df = pd.DataFrame(scaler.fit_transform(df), columns=df.columns)
+        normalized_df = pd.DataFrame(scaler.fit_transform(df), columns=prev_df.columns)
 
         # 将第一列添加回归一化后的数据
         normalized_df.insert(0, first_column.name, first_column.iloc[1:].reset_index(drop=True))

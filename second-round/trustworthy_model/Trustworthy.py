@@ -211,12 +211,12 @@ class Trustworthy:
     # 可信属性值，返回格式为字典：{}
     def get_attribute_trustworthy(self, project_index):
         attribute_trustworthy = {}
-        attribute_trustworthy['availability'] = self.attr_availability
-        attribute_trustworthy['reliability'] = self.attr_reliability
-        attribute_trustworthy['security'] = self.attr_security
-        attribute_trustworthy['timeliness'] = self.attr_timeliness
-        attribute_trustworthy['maintainability'] = self.attr_maintainability
-        attribute_trustworthy['survivability'] = self.attr_survivability
+        attribute_trustworthy['availability'] = self.attr_availability[project_index]
+        attribute_trustworthy['reliability'] = self.attr_reliability[project_index]
+        attribute_trustworthy['security'] = self.attr_security[project_index]
+        attribute_trustworthy['timeliness'] = self.attr_timeliness[project_index]
+        attribute_trustworthy['maintainability'] = self.attr_maintainability[project_index]
+        attribute_trustworthy['survivability'] = self.attr_survivability[project_index]
 
         return attribute_trustworthy
 
@@ -234,27 +234,27 @@ class Trustworthy:
         subAttribute_trustworthy['availability']['accuracy_of_functionality'] = None
         subAttribute_trustworthy['availability']['understandability'] = None
         subAttribute_trustworthy['availability']['operability'] = None
-        subAttribute_trustworthy['availability']['adaptability'] = self.subA_adaptability
-        subAttribute_trustworthy['availability']['installability'] = self.subA_installability
+        subAttribute_trustworthy['availability']['adaptability'] = self.subA_adaptability[project_index]
+        subAttribute_trustworthy['availability']['installability'] = self.subA_installability[project_index]
 
-        subAttribute_trustworthy['reliability']['maturity'] = self.subA_maturity
+        subAttribute_trustworthy['reliability']['maturity'] = self.subA_maturity[project_index]
         subAttribute_trustworthy['reliability']['fault_tolerance'] = None
 
         subAttribute_trustworthy['security']['data_confidentiality'] = None
-        subAttribute_trustworthy['security']['code_security'] = self.subA_code_security
+        subAttribute_trustworthy['security']['code_security'] = self.subA_code_security[project_index]
         subAttribute_trustworthy['security']['control_confidentiality'] = None
 
-        subAttribute_trustworthy['timeliness']['time_characteristics'] = self.subA_time_characteristics
+        subAttribute_trustworthy['timeliness']['time_characteristics'] = self.subA_time_characteristics[project_index]
 
-        subAttribute_trustworthy['maintainability']['analyzability'] = self.subA_analyzability
-        subAttribute_trustworthy['maintainability']['changeability'] = self.subA_changeability
-        subAttribute_trustworthy['maintainability']['stability'] = self.subA_stability
-        subAttribute_trustworthy['maintainability']['testability'] = self.subA_testability
+        subAttribute_trustworthy['maintainability']['analyzability'] = self.subA_analyzability[project_index]
+        subAttribute_trustworthy['maintainability']['changeability'] = self.subA_changeability[project_index]
+        subAttribute_trustworthy['maintainability']['stability'] = self.subA_stability[project_index]
+        subAttribute_trustworthy['maintainability']['testability'] = self.subA_testability[project_index]
 
         subAttribute_trustworthy['survivability']['attack_resistance'] = None
         subAttribute_trustworthy['survivability']['attack_identification'] = None
-        subAttribute_trustworthy['survivability']['recoverability'] = self.subA_recoverability
-        subAttribute_trustworthy['survivability']['self_improvement'] = self.subA_self_improvement
+        subAttribute_trustworthy['survivability']['recoverability'] = self.subA_recoverability[project_index]
+        subAttribute_trustworthy['survivability']['self_improvement'] = self.subA_self_improvement[project_index]
 
         return subAttribute_trustworthy
 

@@ -72,8 +72,8 @@ technical_fork = data_dict.get('technical_fork', [])
 
 
 # ----------计算可信值----------
-dates = [f"{year}-{month:02d}" for year in range(2022, 2024) for month in range(1, 13) if (
-            year == 2022 or (year == 2023 and month <= 3))]
+dates = [f"{year}-{month:02d}" for year in range(2021, 2024) for month in range(1, 13) if (
+            year == 2021 or year == 2022 or (year == 2023 and month <= 3))]
 
 trustworthy_data = {}
 for project_name in project_list:
