@@ -59,7 +59,7 @@ OpenRank 在开源生态中扮演着至关重要的角色。它为开源项目�
 
 我们分析了前300流行项目指标数据`top300_metrics`，计算这些热门开源软件在各个可信属性上的得分以及总的软件可信值，并可视化。
 
-OpenTrustworthy_开源软件可信性评估与预测工具大屏（详见）：
+OpenTrustworthy_开源软件可信性评估与预测工具大屏（详见[OpenTrustworthy大屏](./second-round/docs/demo.md)）：
 
 ![alt text](img/demo.png)
 
